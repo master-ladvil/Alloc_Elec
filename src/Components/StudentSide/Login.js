@@ -70,6 +70,12 @@ export default function Login(){
                     <input id='inputReg2' ref={LogInput2} placeholder='givenPWD' className='textBoxInput'/>      
                 </div>
                 <button className='StuLogBoxes StuLogButton' onClick={handleClick}>Login</button>
+                <div className='NavigateTo' onClick={()=>{
+                    history.push('signup')
+                }}>New User? SignUp</div>
+                <div className='NavigateTo' onClick={()=>{
+                    history.push('admin')
+                }}>Admin</div>
             </div>
         )
     }

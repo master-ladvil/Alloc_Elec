@@ -62,6 +62,8 @@ export default function SignUp() {
                     <input id='inputReg2' ref={LogInput2} placeholder='givenPWD' className='textBoxInput'/>      
                 </div>
                 <button className='StuLogBoxes StuLogButton' onClick={handleClick}>Signup</button>
+                <div className='NavigateTo'>New User? SignUp</div>
+                <div className='NavigateTo'>Admin</div>
             </div>
         )
     }
