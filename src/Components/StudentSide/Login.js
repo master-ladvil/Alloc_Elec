@@ -55,7 +55,7 @@ export default function Login(){
                   response.regNo = res.data.regNo
                   response.token = res.headers['auth-token']
                   localStorage.setItem('AntennaWaveForm', JSON.stringify(response))
-                //   history.push('/electives')
+                  history.push('/electives')
               }
           })
     }

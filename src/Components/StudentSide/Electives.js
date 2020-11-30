@@ -100,7 +100,7 @@ export default function Electives() {
         }else if(Year === 'Final'){
             return(
                 <>
-                    <InitialInputs list={finalFirst} value={E2} helperText="Select your Choice" stater={handleE2}/>
+                    <InitialInputs list={finalFirst} value={E2} helperText="Select your Choice" stater={handleE2}/> 
                     <InitialInputs list={finalSecond} value={E3} helperText="Select your Choice" stater={handleE3}/>
                 </>
             )
