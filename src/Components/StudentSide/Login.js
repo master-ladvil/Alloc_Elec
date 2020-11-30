@@ -48,7 +48,7 @@ export default function Login(){
             }
           })
           .then(res=>{
-              if(res.data.status !== 'login succe5fu!!')console.log(res.data,res.headers['auth-token'])
+              if(res.data.status != 'login succe5fu!!')console.log(res.data,res.headers['auth-token'])
               else if(res.data.status === 'login succe5ful!'){
                   console.log(res.data)
                   response.studentName = res.data.StudentName

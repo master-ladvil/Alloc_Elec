@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Flamenco&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Geo:ital@1&display=swap');
+
+.Effer{
+}
+
+.pdfButton{
+    background-color: #FF7474;
+    color: #0C0E2E;
+    font-weight: bolder;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    border: none;
+    width: fit-content;
+    height: fit-content;
+    padding: 10px 20px 10px 20px;
+    font-family: 'Mulish';
+    margin-top: 10px;
+    margin-right: auto;
+    margin-left: auto;
+    display: block;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: ease-in-out 0.2s;
+}
