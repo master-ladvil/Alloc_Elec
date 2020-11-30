@@ -14,9 +14,9 @@ const Sections = [
     'A','B','C','D','E','F'
 ];
 
-const thirdElectives = ['one','2','3','4','5']
-const finalFirst = ['one','2','3','4','5']
-const finalSecond = ['one','2','3','4','5']
+const thirdElectives = ['CS8075-Data Warehousing-and-Data Mining','IT8076-Software-Testing','CS8077-Graph-Theory-and-Applications','IT8071-Digital-Signal-Processing','GE8075-Intellectual-Property-Rights']
+const finalFirst = ['CS8085-Social-Network-Analysis','IT8073-Information-Security','CS8074-Cyber-Forensics','CS8086-Soft-Computing','GE8076-Professional-Ethics-in-Engineering']
+const finalSecond = ['CS8080-Information-Retrieval-Techniques','CS8078-Green-Computing']
 
 const StudentData = {
     studentName : '',
@@ -44,10 +44,10 @@ const UploadData4 = {
 }
 
 export default function Electives() {
-    const getCurr = JSON.parse(localStorage.getItem('AntennaWaveForm'))
-    StudentData.studentName = UploadData3.studentName = UploadData4.regNo = getCurr.studentName
-    StudentData.regNo = UploadData3.regNo = UploadData4.regNo = getCurr.regNo
-    StudentData.token = getCurr.token
+    // const getCurr = JSON.parse(localStorage.getItem('AntennaWaveForm'))
+    // StudentData.studentName = UploadData3.studentName = UploadData4.regNo = getCurr.studentName
+    // StudentData.regNo = UploadData3.regNo = UploadData4.regNo = getCurr.regNo
+    // StudentData.token = getCurr.token
 
     const loginURL = 'http://localhost:4200/students/login'
 
