@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Flamenco&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Geo:ital@1&display=swap');
+
+.StuLogin{
+    background-color: #0C0E2E;
+}
+
+.StatelessName{
+    display: block;
+    width: 100%;
+    height: 100px;
+    font-family: 'Geo';
+    color: white;
+    font-size: 45pt;  
+    text-align: end;
+    padding: 20px 20px 0 0;
+    float: right;
+    margin-bottom: 60px;
+    transition: ease-out 1s;
+}
+
+.StatelessName:hover{
+    color: #FF7474;
+}
+
+.StuLogBoxes{
+    padding: 10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 25%;
+    align-items: center;
+    height: fit-content;
+}
+
+.textBoxInput{
+    border-style: solid;
+    border-width: thin thin medium thin;
+    padding: 10px;
+    color: white;
+    font-size: 13pt;
+    background-color: #0C0E2E;
+    border-radius: 5px 5px 0 0;
+    border-color: white;
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
+
+.labeler{
+     color: #FF7474;
+     font-family: 'Mulish';
+     font-weight: bold;
+}
+
+.StuLogButton{
+    background-color: #FF7474;
+    color: #0C0E2E;
+    font-weight: bolder;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    border: none;
+    width: fit-content;
+    height: fit-content;
+    padding: 10px 20px 10px 20px;
+    font-family: 'Mulish';
+    margin-left: 57.5%;
+    margin-top: 10px;
+    border-radius: 5px;
+    transition: ease-in-out 0.2s;
+}
+
+.StuLogButton:hover{
+    color: white;
+    border-radius: 7px;
+}
+
+.textBoxInput:hover{
+    border-color: white white #FF7474 white;
+}
+
+@media only screen and (max-width: 900px){
+    .StatelessName{
+        display: unset;
+        font-size: 50pt;
+    }
+}
