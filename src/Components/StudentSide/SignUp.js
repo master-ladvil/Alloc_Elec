@@ -65,7 +65,7 @@ export default function SignUp() {
                 </div>
                 <button className='StuLogBoxes StuLogButton' onClick={handleClick}>Signup</button>
                 <div className='NavigateTo' style={{color:'black'}} onClick={()=>{
-                    history.push('/student/enter')
+                    history.push('/')
                 }}>Existing User? login</div>
                 <div className='NavigateTo' style={{color:'black'}} onClick={()=>{
                     history.replace('admin')

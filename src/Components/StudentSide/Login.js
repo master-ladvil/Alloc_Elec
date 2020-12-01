@@ -59,7 +59,7 @@ export default function Login(){
                   response.token = res.data.token
                   console.log(response)
                   localStorage.setItem('AntennaWaveForm', JSON.stringify(response))
-                  history.push('enter/electives')
+                  history.push('/electives')
               }
           })
     }
@@ -78,7 +78,7 @@ export default function Login(){
                     history.push('signup')
                 }}>New User? SignUp</div>
                 <div className='NavigateTo' onClick={()=>{
-                    history.push('enter/admin')
+                    history.push('admin')
                 }}>Admin</div>
             </div>
         )

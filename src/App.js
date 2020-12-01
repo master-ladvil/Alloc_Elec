@@ -14,11 +14,11 @@ function App() {
   return (
     <Router>
       <Switch>
-        <Route exact path="/student/enter/signup"><SignUp/></Route>
-        <Route exact path="/student/enter"><Login/></Route>
-        <Route exact path="/student/enter/electives"><Electives/></Route>
-        <Route exact path="/student/enter/admin"><Effer/></Route>
-        <Route exact path="/student/enter/admin/pdf"><PDF/></Route>
+        <Route exact path="/signup"><SignUp/></Route>
+        <Route exact path="/"><Login/></Route>
+        <Route exact path="/electives"><Electives/></Route>
+        <Route exact path="/admin"><Effer/></Route>
+        <Route exact path="/admin/pdf"><PDF/></Route>
         <Route path="/"><Login/></Route>
       </Switch>
     </Router>
