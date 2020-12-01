@@ -19,7 +19,7 @@ function App() {
         <Route exact path="/student/enter/electives"><Electives/></Route>
         <Route exact path="/student/enter/admin"><Effer/></Route>
         <Route exact path="/student/enter/admin/pdf"><PDF/></Route>
-        <Route path="/"></Route>
+        <Route path="/"><Login/></Route>
       </Switch>
     </Router>
   );
