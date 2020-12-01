@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/Alloc_Elec/static/css/main.313fa32f.chunk.css",
-    "main.js": "/Alloc_Elec/static/js/main.a584cb4f.chunk.js",
-    "main.js.map": "/Alloc_Elec/static/js/main.a584cb4f.chunk.js.map",
+    "main.js": "/Alloc_Elec/static/js/main.c9ae5b53.chunk.js",
+    "main.js.map": "/Alloc_Elec/static/js/main.c9ae5b53.chunk.js.map",
     "runtime-main.js": "/Alloc_Elec/static/js/runtime-main.fe693a49.js",
     "runtime-main.js.map": "/Alloc_Elec/static/js/runtime-main.fe693a49.js.map",
     "static/js/2.d18c25b4.chunk.js": "/Alloc_Elec/static/js/2.d18c25b4.chunk.js",
@@ -17,6 +17,6 @@
     "static/js/runtime-main.fe693a49.js",
     "static/js/2.d18c25b4.chunk.js",
     "static/css/main.313fa32f.chunk.css",
-    "static/js/main.a584cb4f.chunk.js"
+    "static/js/main.c9ae5b53.chunk.js"
   ]
 }
