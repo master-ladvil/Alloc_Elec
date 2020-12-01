@@ -75,7 +75,7 @@ export default function Login(){
                 </div>
                 <button className='StuLogBoxes StuLogButton' onClick={handleClick}>Login</button>
                 <div className='NavigateTo' onClick={()=>{
-                    history.push('enter/signup')
+                    history.push('signup')
                 }}>New User? SignUp</div>
                 <div className='NavigateTo' onClick={()=>{
                     history.push('enter/admin')
