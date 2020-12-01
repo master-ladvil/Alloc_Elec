@@ -6,12 +6,13 @@ import FormControl from '@material-ui/core/FormControl'
 import axios from 'axios'
 
 const Years = [
+    'Year',
     'Third',
     'Final'
 ];
 
 const Sections = [
-    'A','B','C','D','E','F'
+    'Section','A','B','C','D','E','F'
 ];
 
 const thirdElectives = ['CS8075-Data Warehousing-and-Data Mining','IT8076-Software-Testing','CS8077-Graph-Theory-and-Applications','IT8071-Digital-Signal-Processing','GE8075-Intellectual-Property-Rights']
@@ -44,19 +45,19 @@ const UploadData4 = {
 }
 
 export default function Electives() {
-    // const getCurr = JSON.parse(localStorage.getItem('AntennaWaveForm'))
-    // StudentData.studentName = UploadData3.studentName = UploadData4.regNo = getCurr.studentName
-    // StudentData.regNo = UploadData3.regNo = UploadData4.regNo = getCurr.regNo
-    // StudentData.token = getCurr.token
+    const getCurr = JSON.parse(localStorage.getItem('AntennaWaveForm'))
+    StudentData.studentName = UploadData3.studentName = UploadData4.studentName = getCurr.studentName
+    StudentData.regNo = UploadData3.regNo = UploadData4.regNo = getCurr.regNo
+    StudentData.token = getCurr.token
 
     const choiceURL3 = 'http://localhost:4200/students/thirdyr'
     const choiceURL4 = 'http://localhost:4200/students/finalyr'
 
-    const [Year, setYear] = useState('3')
-    const [Section, setSection] = useState('A')
-    const [E1, setE1] = useState()
-    const [E2, setE2] = useState()
-    const [E3, setE3] = useState()
+    const [Year, setYear] = useState('Year')
+    const [Section, setSection] = useState('Section')
+    const [E1, setE1] = useState('')
+    const [E2, setE2] = useState('')
+    const [E3, setE3] = useState('')
 
     function NoChangeName(){
         return(
@@ -66,29 +67,31 @@ export default function Electives() {
 
     const handleYear = (event) => {
       setYear(event.target.value)
-      UploadData3.year = Year
-      UploadData4.sec = Section
+      UploadData3.year = event.target.value
+      UploadData4.year = event.target.value
     };
 
     const handleSection = (event) => {
       setSection(event.target.value)
-      UploadData3.sec = Section
-      UploadData4.sec = Section
+      UploadData3.sec = event.target.value
+      UploadData4.sec = event.target.value
+      console.log(event.target.value)
     };
 
     const handleE1 = (event) => {
         setE1(event.target.value)
-        UploadData3.peOne = E1
+        console.log(event.target.value,E1)
+        UploadData3.peOne = event.target.value
     }
 
     const handleE2 = (event) => {
         setE2(event.target.value)
-        UploadData4.peFour = E2
+        UploadData4.peFour = event.target.value
     }
 
     const handleE3 = (event) => {
         setE3(event.target.value)
-        UploadData4.peFive = E3
+        UploadData4.peFive = event.target.value
     }
 
     function SelectFromList(){
@@ -170,14 +173,21 @@ export default function Electives() {
     function UploadSubmits(){
         var data = {}
         var URL = ''
-        if(Year === 3){
+        if(Year === 'Third'){
             URL = choiceURL3
             data = UploadData3
+            data.year = 3
+            console.log(data)
         }
         else{
             URL = choiceURL4
             data = UploadData4
+            data.year = 4
+            console.log(data)
         }
+
+        if(data.sec === '')data.sec='A'
+        if(data.year === '')data.year = 3
 
         axios.post(URL,data,  {
             headers: {
@@ -190,7 +200,10 @@ export default function Electives() {
           .then(res => {
               if(!res.data.message){
                 alert('Choice Submitted Successfully!')
-              }else alert('Error SomeHow')
+              }else{
+                alert('Error SomeHow')
+                console.log(res.data.message)
+              }
           })
     }
 

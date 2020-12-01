@@ -14,8 +14,8 @@ export default function SignUp() {
     var LogInput1 = createRef()
     var LogInput2 = createRef()
     var LogInput0 = createRef()
-    const signUpURL = 'http://localhost:4200/students/signup'
-    // const proxyURL = 'https://cors-anywhere.herokuapp.com/'
+    const signUpURL = 'https://anten4.herokuapp.com/students/signup'
+    const proxyURL = 'https://cors-anywhere.herokuapp.com/'
 
     function NoChangeName(){
         return(
@@ -37,7 +37,7 @@ export default function SignUp() {
 
         console.log(data)
         
-        axios.post(signUpURL,data, {
+        axios.post(proxyURL+signUpURL,data, {
             headers: {
               'Access-Control-Allow-Origin': '*',
               'Access-Control-Allow-Methods': 'POST',

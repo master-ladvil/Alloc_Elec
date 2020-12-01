@@ -18,8 +18,8 @@ export default function Login(){
     var history = useHistory()
     var LogInput1 = createRef();
     var LogInput2 = createRef();
-    const loginURL = 'http://localhost:4200/students/login'
-    // const proxyURL = 'https://cors-anywhere.herokuapp.com/'
+    const loginURL = 'https://anten4.herokuapp.com/students/login'
+    const proxyURL = 'https://cors-anywhere.herokuapp.com/'
 
     function NoChangeName(){
         return(
@@ -40,7 +40,7 @@ export default function Login(){
 
         // console.log(data) https://anten4.herokuapp.com/
         
-        axios.post(loginURL,data, {
+        axios.post(proxyURL+loginURL,data, {
             headers: {
               'Access-Control-Allow-Origin': '*',
               'Access-Control-Allow-Methods': 'POST',
@@ -48,14 +48,18 @@ export default function Login(){
             }
           })
           .then(res=>{
-              if(res.data.status !== 'login succe5fu!!')console.log(res.data)
-              else if(res.data.status === 'login succe5ful!'){
+              if(res.data.status){
                   console.log(res.data)
-                  response.studentName = res.data.StudentName
-                  response.regNo = res.data.regNo
-                  response.token = res.data['auth-token']
+                  alert('Login failed')
+              }
+              else if(res.data.token){
+                  console.log(res.data)
+                  response.studentName = res.data.response.studentName
+                  response.regNo = res.data.response.regNo
+                  response.token = res.data.token
+                  console.log(response)
                   localStorage.setItem('AntennaWaveForm', JSON.stringify(response))
-                  history.push('electives')
+                  history.push('enter/electives')
               }
           })
     }
