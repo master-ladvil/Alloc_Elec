@@ -1,5 +1,6 @@
 import React, { createRef } from 'react'
 import axios from 'axios'
+import { useHistory } from 'react-router-dom'
 
 const data = {
     studentName: '',
@@ -8,6 +9,7 @@ const data = {
 }
 
 export default function SignUp() {
+    var history = useHistory()
 
     var LogInput1 = createRef()
     var LogInput2 = createRef()
@@ -50,7 +52,7 @@ export default function SignUp() {
           })
     }
 
-    function StuLoginForm(){
+    function StuSigninForm(){
         return(
             <div>
                 <div className='StuLogBoxes'>
@@ -62,8 +64,12 @@ export default function SignUp() {
                     <input id='inputReg2' ref={LogInput2} placeholder='givenPWD' className='textBoxInput'/>      
                 </div>
                 <button className='StuLogBoxes StuLogButton' onClick={handleClick}>Signup</button>
-                <div className='NavigateTo'>New User? SignUp</div>
-                <div className='NavigateTo'>Admin</div>
+                <div className='NavigateTo' style={{color:'black'}} onClick={()=>{
+                    history.push('/student/enter')
+                }}>Existing User? login</div>
+                <div className='NavigateTo' style={{color:'black'}} onClick={()=>{
+                    history.replace('admin')
+                }}>Admin</div>
             </div>
         )
     }
@@ -71,7 +77,7 @@ export default function SignUp() {
     return (
         <div className='StuSign'>
             <NoChangeName/>
-            <StuLoginForm/>
+            <StuSigninForm/>
         </div>
     )
 }

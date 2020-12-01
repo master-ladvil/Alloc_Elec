@@ -48,14 +48,14 @@ export default function Login(){
             }
           })
           .then(res=>{
-              if(res.data.status != 'login succe5fu!!')console.log(res.data,res.headers['auth-token'])
+              if(res.data.status !== 'login succe5fu!!')console.log(res.data)
               else if(res.data.status === 'login succe5ful!'){
                   console.log(res.data)
                   response.studentName = res.data.StudentName
                   response.regNo = res.data.regNo
-                  response.token = res.headers['auth-token']
+                  response.token = res.data['auth-token']
                   localStorage.setItem('AntennaWaveForm', JSON.stringify(response))
-                  history.push('/electives')
+                  history.push('electives')
               }
           })
     }
@@ -71,10 +71,10 @@ export default function Login(){
                 </div>
                 <button className='StuLogBoxes StuLogButton' onClick={handleClick}>Login</button>
                 <div className='NavigateTo' onClick={()=>{
-                    history.push('signup')
+                    history.push('enter/signup')
                 }}>New User? SignUp</div>
                 <div className='NavigateTo' onClick={()=>{
-                    history.push('admin')
+                    history.push('enter/admin')
                 }}>Admin</div>
             </div>
         )

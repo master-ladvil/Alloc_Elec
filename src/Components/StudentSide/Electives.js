@@ -49,7 +49,8 @@ export default function Electives() {
     // StudentData.regNo = UploadData3.regNo = UploadData4.regNo = getCurr.regNo
     // StudentData.token = getCurr.token
 
-    const loginURL = 'http://localhost:4200/students/login'
+    const choiceURL3 = 'http://localhost:4200/students/thirdyr'
+    const choiceURL4 = 'http://localhost:4200/students/finalyr'
 
     const [Year, setYear] = useState('3')
     const [Section, setSection] = useState('A')
@@ -168,10 +169,17 @@ export default function Electives() {
 
     function UploadSubmits(){
         var data = {}
-        if(Year === 3)data = UploadData3
-        else data = UploadData4
+        var URL = ''
+        if(Year === 3){
+            URL = choiceURL3
+            data = UploadData3
+        }
+        else{
+            URL = choiceURL4
+            data = UploadData4
+        }
 
-        axios.post(loginURL,data,  {
+        axios.post(URL,data,  {
             headers: {
               'auth-token': StudentData.token,
               'Access-Control-Allow-Origin': '*',
