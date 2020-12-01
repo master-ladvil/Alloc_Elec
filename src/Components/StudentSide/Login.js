@@ -40,7 +40,7 @@ export default function Login(){
 
         // console.log(data) https://anten4.herokuapp.com/
         
-        axios.post(proxyURL+loginURL,data, {
+        axios.post(loginURL,data, {
             headers: {
               'Access-Control-Allow-Origin': '*',
               'Access-Control-Allow-Methods': 'POST',
@@ -71,7 +71,7 @@ export default function Login(){
                     <Labeler name='Register Number' htmlFor='inputReg1'/>
                     <input id='inputReg1' ref={LogInput1} placeholder='92131910xxxx' className='textBoxInput'/>
                     <Labeler name='Password' htmlFor='inputReg2'/>
-                    <input id='inputReg2' ref={LogInput2} placeholder='givenPWD' className='textBoxInput'/>      
+                    <input id='inputReg2' type="password" ref={LogInput2} placeholder='givenPWD' className='textBoxInput'/>      
                 </div>
                 <button className='StuLogBoxes StuLogButton' onClick={handleClick}>Login</button>
                 <div className='NavigateTo' onClick={()=>{

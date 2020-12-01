@@ -50,8 +50,8 @@ export default function Electives() {
     StudentData.regNo = UploadData3.regNo = UploadData4.regNo = getCurr.regNo
     StudentData.token = getCurr.token
 
-    const choiceURL3 = 'http://localhost:4200/students/thirdyr'
-    const choiceURL4 = 'http://localhost:4200/students/finalyr'
+    const choiceURL3 = 'https://anten4.herokuapp.com/students/thirdyr'
+    const choiceURL4 = 'https://anten4.herokuapp.com/students/finalyr'
 
     const [Year, setYear] = useState('Year')
     const [Section, setSection] = useState('Section')
